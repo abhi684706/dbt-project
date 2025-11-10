@@ -15,4 +15,4 @@ Gender as GENDER,
 Category as CATEGORY,
 Payment Method as PAYMENT_METHOD
 from
-{{ source('RAW_ADVERITY','shopping_trends')}}
+{{ source('RAW_ADVERITY', 'shopping_trends') }}
