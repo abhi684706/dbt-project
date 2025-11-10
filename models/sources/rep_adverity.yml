@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: RAW_ADVERITY
+    database: |
+          {%- if target.database ==  "EDW_DEV"   -%}  EDW_REPLICATION_DEV
+          {%- elif target.database ==  "EDW_TST"   -%}  EDW_REPLICATION_TST
+          {%- elif target.database ==  "EDW_PRD"   -%}  EDW_REPLICATION
+          {%- else -%} EDW_REPLICATION_DEV
+          {%- endif -%}
+    schema: RAW_ADVERITY_DBO
+    tables:
+      - name: shopping_trends
+      - name: shopping_trends_updated
