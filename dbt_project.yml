@@ -40,3 +40,9 @@ models:
     # Applies to all files under models/example/
     example:
       +materialized: table
+    raw_market_adverity:
+      +materialized: view
+    edw_market_adverity:
+      +materialized: view  
+    pub_market_adverity:
+      +materialized: view  
