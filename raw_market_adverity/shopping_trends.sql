@@ -1,7 +1,7 @@
 {{
   config(
       alias = 'shopping_trends',
-      schema = 'ardent-depth-399309',
+      schema = 'raw_market_adverity',
       materialized = 'view',
       tags = ['raw_market_adverity'],
       copy_grants= true
