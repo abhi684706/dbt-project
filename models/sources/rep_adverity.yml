@@ -8,7 +8,7 @@ sources:
           {%- elif target.database ==  "EDW_PRD"   -%}  EDW_REPLICATION
           {%- else -%} EDW_REPLICATION_DEV
           {%- endif -%}
-    schema: RAW_ADVERITY_DBO
+    schema: REP_ADVERITY_DBO
     tables:
       - name: shopping_trends
       - name: shopping_trends_updated
