@@ -1,7 +1,7 @@
 {{
   config(
       alias = 'shopping_trends',
-      schema = 'raw_market_adverity',
+      schema = 'dbt_big',
       materialized = 'view',
       tags = ['raw_market_adverity'],
       copy_grants= true
@@ -15,4 +15,4 @@ Gender as GENDER,
 Category as CATEGORY,
 Payment Method as PAYMENT_METHOD
 from
-{{ source('RAW_ADVERITY', 'shopping_trends') }}
+{{ source('dbt_big', 'shopping_trends') }}
