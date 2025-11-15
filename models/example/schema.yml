@@ -19,3 +19,8 @@ models:
             tests:
                 - unique
                 - not_null
+    - name: dbt_big
+      database: ardent-depth-399309
+      schema: dbt_big
+      tables:
+      - name: shopping_trends
