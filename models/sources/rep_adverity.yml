@@ -1,9 +1,0 @@
-version: 2
-
-sources:
-  - name: dbt_big
-    database: ardent-depth-399309
-    schema: "{{ var('schema_name', 'dev_dbt_big') }}"
-    tables:
-      - name: shopping_trends
-      - name: shopping_trends_updated
