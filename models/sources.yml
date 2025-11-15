@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: dbt_big
+    database: ardent-depth-399309 # Your GCP project ID
+    schema: dbt_big            # Your BigQuery dataset name
+    tables:
+      - name: shopping_trends
+      - name: shopping_trends_updated # If you want to include this table as well

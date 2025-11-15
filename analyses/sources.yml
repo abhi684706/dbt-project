@@ -1,0 +1,20 @@
+/*version: 2
+
+sources:
+  - name: dbt_big
+    database: ardent-depth-399309
+    schema: "{{ var('schema_name', 'dev_dbt_big') }}"
+    tables:
+      - name: shopping_trends
+      - name: shopping_trends_updated 
+      *\
+
+
+version: 2
+
+sources:
+  - name: dbt_big
+    database: ardent-depth-399309 # This should be your GCP project ID from Image 2
+    schema: dbt_big            # This is your BigQuery dataset name from Image 2
+    tables:
+      - name: shopping_trends      
