@@ -1,6 +1,6 @@
 {{
   config(
-      alias = 'shopping_trends',
+      --alias = 'shopping_trends',
       --schema = 'dev_dbt_big',
       materialized = 'view',
       --tags = ['dbt_big'],
