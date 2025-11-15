@@ -1,14 +1,15 @@
 version: 2
 
 sources:
-  - name: RAW_ADVERITY
+  - name: dbt_big
     database: |
-          {%- if target.database ==  "EDW_DEV"   -%}  EDW_REPLICATION_DEV
-          {%- elif target.database ==  "EDW_TST"   -%}  EDW_REPLICATION_TST
-          {%- elif target.database ==  "EDW_PRD"   -%}  EDW_REPLICATION
-          {%- else -%} EDW_REPLICATION_DEV
-          {%- endif -%}
-    schema: REP_ADVERITY_DBO
+          ardent-depth-399309
+          --{%- if target.database ==  "EDW_DEV"   -%}  EDW_REPLICATION_DEV
+          --{%- elif target.database ==  "EDW_TST"   -%}  EDW_REPLICATION_TST
+          --{%- elif target.database ==  "EDW_PRD"   -%}  ardent-depth-399309
+          --{%- else -%} EDW_REPLICATION_DEV
+          --{%- endif -%}
+    schema: dbt_big
     tables:
       - name: shopping_trends
       - name: shopping_trends_updated
