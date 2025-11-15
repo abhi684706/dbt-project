@@ -1,7 +1,7 @@
 {{
   config(
       alias = 'shopping_trends',
-      schema = 'dbt_big',
+      schema = 'dev_dbt_big',
       materialized = 'view',
       tags = ['dbt_big'],
       copy_grants= true
