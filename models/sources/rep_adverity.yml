@@ -2,13 +2,7 @@ version: 2
 
 sources:
   - name: dbt_big
-    database: |
-          ardent-depth-399309
-          --{%- if target.database ==  "EDW_DEV"   -%}  EDW_REPLICATION_DEV
-          --{%- elif target.database ==  "EDW_TST"   -%}  EDW_REPLICATION_TST
-          --{%- elif target.database ==  "EDW_PRD"   -%}  ardent-depth-399309
-          --{%- else -%} EDW_REPLICATION_DEV
-          --{%- endif -%}
+    database: ardent-depth-399309
     schema: "{{ var('schema_name', 'dev_dbt_big') }}"
     tables:
       - name: shopping_trends
