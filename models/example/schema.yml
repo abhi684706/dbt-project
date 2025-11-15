@@ -19,3 +19,32 @@ models:
           - unique
           - not_null
   
+  - name: shopping_trends
+    description: "Shopping trends data model"
+    columns:
+      - name: CUSTOMER_ID
+        description: "Unique customer identifier"
+        tests:
+          - unique
+          - not_null
+      
+      - name: AGE
+        description: "Customer age"
+        tests:
+          - not_null
+      
+      - name: GENDER
+        description: "Customer gender"
+        tests:
+          - accepted_values:
+              values: ['Male', 'Female', 'Other']
+      
+      - name: CATEGORY
+        description: "Product category"
+        tests:
+          - not_null
+      
+      - name: PAYMENT_METHOD
+        description: "Payment method used"
+        tests:
+          - not_null
