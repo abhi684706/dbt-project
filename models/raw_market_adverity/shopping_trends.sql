@@ -3,7 +3,7 @@
       alias = 'shopping_trends',
       schema = 'dbt_big',
       materialized = 'view',
-      tags = ['raw_market_adverity'],
+      tags = ['dbt_big'],
       copy_grants= true
   )
 }}
