@@ -9,7 +9,7 @@ sources:
           --{%- elif target.database ==  "EDW_PRD"   -%}  ardent-depth-399309
           --{%- else -%} EDW_REPLICATION_DEV
           --{%- endif -%}
-    schema: "{{ var('schema_name', 'dev_dbt_big')}}
+    schema: "{{ var('schema_name', 'dev_dbt_big') }}"
     tables:
       - name: shopping_trends
       - name: shopping_trends_updated
